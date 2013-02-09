@@ -6,6 +6,12 @@ This repo contains the dll built using MonoDevelop and targeted towards Mono Por
 This means the same dll will work in your MonoDroid applications targetted for Android as well as
 you MonoTouch application targetted towards iPhone.
 
+Pre-requisites
+
+This assumes that you have setup your MonoDevelop IDE for the platform that you are trying to build for (iOS/Android etc).
+If you haven't done that, you can get started on that by visiting http://docs.xamarin.com/
+
+
 Steps for integrating AppWarp in to your Mono project
 
 The steps are quite straight forward
