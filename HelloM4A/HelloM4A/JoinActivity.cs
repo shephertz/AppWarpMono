@@ -15,38 +15,38 @@ using com.shephertz.app42.gaming.multiplayer.client.message;
 namespace HelloM4A
 {
 	[Activity (Label = "HelloM4A", MainLauncher = true)]
-	public class Activity1 : Activity, ConnectionRequestListener
+	public class JoinActivity : Activity, ConnectionRequestListener, RoomRequestListener
 	{
-
+		private TextView name;
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
+			base.OnCreate (bundle);
+			//Use UI created in Main.axml
+			SetContentView (Resource.Layout.Main);
+
 			//Create the user interface in code
 			var layout = new LinearLayout (this);
 			layout.Orientation = Orientation.Vertical;
-			
-			var aLabel = new TextView (this);
-			aLabel.Text = "Hello, Mono for Android";
-			
-			var aButton = new Button (this);      
-			aButton.Text = "Join Zone";
-			aButton.Click += (sender, e) => {
+
+			name = FindViewById<TextView> (Resource.Id.input_name);
+
+			var showSecond = FindViewById<Button> (Resource.Id.connectButton);
+			showSecond.Click += (sender, e) => {
 				WarpClient.GetInstance().Connect();
-			};  
-			layout.AddView (aLabel);
-			layout.AddView (aButton);           
-			SetContentView (layout);
-			WarpClient.initialize("Your API Key", 
-			                      "Your Secret Key");
+			};
+
+			WarpClient.initialize(Constants.API_KEY, Constants.SECRET_KEY);
 			WarpClient.GetInstance().AddConnectionRequestListener(this);
+			WarpClient.GetInstance().AddRoomRequestListener(this);
 		}
 
 		public void onConnectDone (ConnectEvent evt)
 		{
 			if (evt.getResult () == WarpResponseResultCode.SUCCESS) {
 				Console.WriteLine ("Connection Successful");
-				WarpClient.GetInstance().JoinZone("dhruv");
+				WarpClient.GetInstance().JoinZone(name.Text);
 			} else {
 				Console.WriteLine ("Connection Failed");
 			}
@@ -56,6 +56,7 @@ namespace HelloM4A
 		{
 			if (evt.getResult () == WarpResponseResultCode.SUCCESS) {
 				Console.WriteLine ("JoinZone Successful");
+				WarpClient.GetInstance().JoinRoom(Constants.CHAT_ROOM_ID);
 			} else {
 				Console.WriteLine ("JoinZone Failed");
 			}
@@ -68,6 +69,38 @@ namespace HelloM4A
 			} else {
 				Console.WriteLine ("Disconnect Failed");
 			}
+		}
+
+
+		public void onGetLiveRoomInfoDone (LiveRoomInfoEvent eventObj)
+		{
+		}
+		
+		public void onJoinRoomDone (RoomEvent eventObj)
+		{
+			if (eventObj.getResult () == WarpResponseResultCode.SUCCESS) {
+				WarpClient.GetInstance ().SubscribeRoom(Constants.CHAT_ROOM_ID);
+			}
+		}
+		
+		public void onLeaveRoomDone (RoomEvent eventObj)
+		{
+		}
+		
+		public void onSetCustomRoomDataDone (LiveRoomInfoEvent eventObj)
+		{
+		}
+		
+		public void onSubscribeRoomDone (RoomEvent eventObj)
+		{
+			if (eventObj.getResult () == WarpResponseResultCode.SUCCESS) {
+				StartActivity(typeof(ChatActivity));
+				this.Finish();
+			}
+		}
+		
+		public void onUnSubscribeRoomDone (RoomEvent eventObj)
+		{
 		}
 	}
 }

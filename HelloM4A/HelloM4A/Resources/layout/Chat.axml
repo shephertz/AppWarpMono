@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:background="@drawable/game_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <EditText
+        android:id="@+id/input_message"
+        android:layout_width="220dp"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="enter message" />
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="100dp"
+        android:background="#000000"
+        android:layout_height="wrap_content"
+        android:text="Send" />
+    <TextView
+        android:id="@+id/chatHistory"
+        android:textSize="12sp"
+        android:paddingLeft="10dp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+</LinearLayout>
