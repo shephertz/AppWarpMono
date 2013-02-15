@@ -4,6 +4,7 @@ using System.Linq;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using com.shephertz.app42.gaming.multiplayer.client;
 
 namespace HelloWorld_iPhone
 {
@@ -15,7 +16,6 @@ namespace HelloWorld_iPhone
 	{
 		// class-level declarations
 		UIWindow window;
-		HelloWorld_iPhoneViewController viewController;
 
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this 
@@ -27,11 +27,16 @@ namespace HelloWorld_iPhone
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
-			viewController = new HelloWorld_iPhoneViewController ();
-			window.RootViewController = viewController;
+			var rootNavigationController = new UINavigationController(); 
+
+			WarpClient.initialize(Constants.API_KEY, Constants.SECRET_KEY);
+
+			JoinController jc = new JoinController();
+			rootNavigationController.PushViewController(jc, false);
+
+			this.window.RootViewController = rootNavigationController; 
 			window.MakeKeyAndVisible ();
-			
+
 			return true;
 		}
 	}

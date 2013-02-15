@@ -82,6 +82,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="AppWarpMonoCompat">
+      <HintPath>..\..\..\..\Distributable\AppWarpMonoCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\Distributable\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -92,17 +98,22 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="HelloWorld_iPhoneViewController.cs" />
-    <Compile Include="HelloWorld_iPhoneViewController.designer.cs">
-      <DependentUpon>HelloWorld_iPhoneViewController.cs</DependentUpon>
+    <Compile Include="JoinController.cs" />
+    <Compile Include="JoinController.designer.cs">
+      <DependentUpon>JoinController.cs</DependentUpon>
     </Compile>
-    <Compile Include="LobbyReqListen.cs" />
-    <Compile Include="NotificationListener.cs" />
-    <Compile Include="RoomReqListener.cs" />
-    <Compile Include="ZoneReqListener.cs" />
+    <Compile Include="ChatController.cs" />
+    <Compile Include="ChatController.designer.cs">
+      <DependentUpon>ChatController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="HelloWorld_iPhoneViewController.xib" />
+    <InterfaceDefinition Include="JoinController.xib" />
+    <InterfaceDefinition Include="ChatController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\game_background.png" />
+  </ItemGroup>
 </Project>

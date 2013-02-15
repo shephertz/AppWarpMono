@@ -5,27 +5,37 @@
     android:background="@drawable/game_background"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <EditText
-        android:id="@+id/input_message"
-        android:layout_width="220dp"
-        android:textSize="20dp"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:hint="enter message" />
-    <Button
-        android:id="@+id/sendButton"
-        android:layout_width="100dp"
-        android:background="#000000"
-        android:layout_height="wrap_content"
-        android:text="Send" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/input_message"
+            android:layout_width="220dp"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="enter message" />
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="40dp"
+            android:textSize="14sp"
+            android:background="#000000"
+            android:layout_marginLeft="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:text="Send" />
+    </LinearLayout>
     <TextView
         android:id="@+id/chatHistory"
-        android:textSize="12sp"
+        android:textSize="16sp"
         android:paddingLeft="10dp"
         android:background="#000000"
         android:textColor="#FFFFFF"
-        android:layout_width="wrap_content"
+        android:minLines="10"
+        android:minWidth="200dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp" />
 </LinearLayout>
