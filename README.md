@@ -36,19 +36,17 @@ How to use the Samples
 
 3. Note its keys – you will require them to initialize the SDK in your code.
 
-4. From the dashboard, create a new room with 2 max players. Note its room id – you will require this in your code.
+4. From the dashboard, create a new room with 5 max players. Note its room id – you will require this in your code.
 
 
 Android Sample
 
-This is based on the Hello, Android project available on Xamarin tutorial. This sample shows how to
-integrate the AppWarp dll in your project. Follow the steps mentioned under above on integrating AppWarp into your
-Mono Project and apply them to the sample. Add the keys you got from AppHQ and add them to Activity1.cs file where 
-indicated. You are now ready to build!
+This Android sample shows how to build a cross platform chat application by integrating the AppWarp dll in your MonoDroid project. 
+Follow the steps mentioned under above on integrating AppWarp into your Mono Project and apply them to the sample. 
+Add the keys you got from AppHQ and add them to Constants.cs file where indicated. You are now ready to build!
 
 iOS Sample
 
-This is based on the Hello, iPhone project available on Xamarin tutorial. This sample shows how to
-integrate the AppWarp dll in your project. Follow the steps mentioned under above on integrating AppWarp into your
-Mono Project and apply them to the sample. Add the keys you got from AppHQ and add them to HelloWorld_iPhoneViewController.cs 
-file where indicated. You are now ready to build!
+This iPhone sample shows how to build a cross platform chat application by integrating the AppWarp dll in your MonoTouch project. 
+Follow the steps mentioned under above on integrating AppWarp into your Mono Project and apply them to the sample. 
+Add the keys you got from AppHQ and add them to Constants.cs file where indicated. You are now ready to build!
