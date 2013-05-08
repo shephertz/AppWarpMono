@@ -1,6 +1,8 @@
 AppWarpMono
 ===========
 
+[![OverView](http://appwarp.shephertz.com/images/appwarp_logo.png)](http://appwarp.shephertz.com)
+
 Cross platform portable dll for MonoDroid and MonoTouch. This will allow you to build cross-platform multiplayer games
 on iOS and Android using C#/.NET skills by leveraging the powerfull [AppWarp](http://appwarp.shephertz.com) real time
 cloud gaming network.
@@ -57,6 +59,7 @@ This iPhone sample shows how to build a cross platform chat application by integ
 Follow the steps mentioned under above on integrating AppWarp into your Mono Project and apply them to the sample. 
 Add the keys you got from AppHQ and add them to Constants.cs file where indicated. You are now ready to build!
 
+[![](http://blogs.shephertz.com/wp-content/uploads/2013/05/Signup.jpg)](https://apphq.shephertz.com/register?appwarp=true)[![](http://blogs.shephertz.com/wp-content/uploads/2013/05/AlreadyRegistered.jpg)](https://apphq.shephertz.com/)
 
 Third Party binaries and licenses used
 JSON.NET
