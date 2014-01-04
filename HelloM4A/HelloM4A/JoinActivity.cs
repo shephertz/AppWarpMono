@@ -34,7 +34,7 @@ namespace HelloM4A
 
 			var showSecond = FindViewById<Button> (Resource.Id.connectButton);
 			showSecond.Click += (sender, e) => {
-				WarpClient.GetInstance().Connect();
+				WarpClient.GetInstance().Connect(name.Text);
 			};
 
 			WarpClient.initialize(Constants.API_KEY, Constants.SECRET_KEY);
@@ -46,20 +46,14 @@ namespace HelloM4A
 		{
 			if (evt.getResult () == WarpResponseResultCode.SUCCESS) {
 				Console.WriteLine ("Connection Successful");
-				WarpClient.GetInstance().JoinZone(name.Text);
+				WarpClient.GetInstance().JoinRoom(Constants.CHAT_ROOM_ID);
 			} else {
 				Console.WriteLine ("Connection Failed");
 			}
 		}
 
-		public void onJoinZoneDone (ConnectEvent evt)
-		{
-			if (evt.getResult () == WarpResponseResultCode.SUCCESS) {
-				Console.WriteLine ("JoinZone Successful");
-				WarpClient.GetInstance().JoinRoom(Constants.CHAT_ROOM_ID);
-			} else {
-				Console.WriteLine ("JoinZone Failed");
-			}
+		public void onInitUDPDone(byte result){
+
 		}
 
 		public void onDisconnectDone(ConnectEvent evt)
@@ -101,6 +95,16 @@ namespace HelloM4A
 		
 		public void onUnSubscribeRoomDone (RoomEvent eventObj)
 		{
+		}
+
+		public void onUpdatePropertyDone(LiveRoomInfoEvent eventObj){
+
+		}
+
+		public void onLockPropertiesDone(byte result){
+		}
+
+		public void onUnlockPropertiesDone(byte result){
 		}
 	}
 }

@@ -98,6 +98,32 @@ namespace HelloM4A
 		public void onUserLeftRoom (RoomData eventObj, string username){
 		}
 
+		public void onUserChangeRoomProperty(RoomData roomData, string sender, Dictionary<string, Object> properties, Dictionary<string, string> lockedPropertiesTable){
+		}
+
+
+		public void onPrivateChatReceived(string sender, string message){
+		}
+
+
+		public void onMoveCompleted(MoveEvent moveEvent){
+		}
+
+
+		public void onUserPaused(string locid, Boolean isLobby, string username){
+		}
+
+
+		public void onUserResumed(string locid, Boolean isLobby, string username){
+		}
+
+
+		public void onGameStarted(string sender, string roomId, string nextTurn){
+		}
+
+		public void onGameStopped(string sender, string roomId){
+		}
+
 		private struct ChatMessage
 		{
 			public String sender;
