@@ -56,7 +56,8 @@ namespace HelloWorld_iPhone
 		{
 			if(WarpClient.GetInstance().GetConnectionState() == WarpConnectionState.DISCONNECTED)
 			{
-				WarpClient.GetInstance().Connect();
+				Console.WriteLine("Connecting as "+this.nameTextField.Text);
+				WarpClient.GetInstance().Connect(this.nameTextField.Text);
 			}
 			else
 			{
@@ -73,20 +74,17 @@ namespace HelloWorld_iPhone
 
 		public void onConnectDone(ConnectEvent eventObj)
 		{
+			Console.WriteLine("onConnectDone as "+eventObj.getResult());
 			if (eventObj.getResult() == WarpResponseResultCode.SUCCESS)
 			{
-				InvokeOnMainThread (delegate { 
-					WarpClient.GetInstance().JoinZone(this.nameTextField.Text);
-				});
+				Console.WriteLine("Joining Room "+Constants.CHAT_ROOM_ID);
+				WarpClient.GetInstance().JoinRoom(Constants.CHAT_ROOM_ID);
 			}		
 		}
 		
-		public void onJoinZoneDone(ConnectEvent eventObj)
+		public void onInitUDPDone(byte result)
 		{
-			if (eventObj.getResult() == WarpResponseResultCode.SUCCESS)
-			{
-				WarpClient.GetInstance().JoinRoom(Constants.CHAT_ROOM_ID);
-			}
+
 		}
 		public void onDisconnectDone(ConnectEvent eventObj)
 		{
@@ -94,6 +92,7 @@ namespace HelloWorld_iPhone
 
 		public void onSubscribeRoomDone(RoomEvent eventObj)
 		{
+			Console.WriteLine("onSubscribeRoomDone as "+eventObj.getResult());
 			if (eventObj.getResult() == WarpResponseResultCode.SUCCESS)
 			{
 				InvokeOnMainThread (delegate { 
@@ -110,8 +109,10 @@ namespace HelloWorld_iPhone
 		
 		public void onJoinRoomDone(RoomEvent eventObj)
 		{
+			Console.WriteLine("onJoinRoomDone as "+eventObj.getResult());
 			if (eventObj.getResult() == WarpResponseResultCode.SUCCESS)
 			{    
+				Console.WriteLine("Subscribing Room "+Constants.CHAT_ROOM_ID);
 				WarpClient.GetInstance().SubscribeRoom(Constants.CHAT_ROOM_ID);
 			}
 		}
@@ -123,7 +124,15 @@ namespace HelloWorld_iPhone
 		public void onGetLiveRoomInfoDone(LiveRoomInfoEvent eventObj)
 		{         
 		}
-		
+
+		public void onUpdatePropertyDone(LiveRoomInfoEvent eventObj){}
+
+		public void onLockPropertiesDone(byte result){
+		}
+
+		public void onUnlockPropertiesDone(byte result){
+		}
+
 		public void onSetCustomRoomDataDone(LiveRoomInfoEvent eventObj)
 		{
 		}

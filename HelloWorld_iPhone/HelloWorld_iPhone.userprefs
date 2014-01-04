@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld_iPhone/ChatController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld_iPhone/JoinController.cs">
     <Files>
-      <File FileName="HelloWorld_iPhone/JoinController.cs" Line="40" Column="4" />
-      <File FileName="HelloWorld_iPhone/ChatController.cs" Line="16" Column="2" />
-      <File FileName="HelloWorld_iPhone/ChatController.designer.cs" Line="21" Column="69" />
+      <File FileName="HelloWorld_iPhone/JoinController.cs" Line="66" Column="5" />
+      <File FileName="HelloWorld_iPhone/ChatController.cs" Line="26" Column="3" />
+      <File FileName="HelloWorld_iPhone/Main.cs" Line="1" Column="1" />
+      <File FileName="HelloWorld_iPhone/Constants.cs" Line="12" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -82,11 +82,8 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="AppWarpMonoCompat">
-      <HintPath>..\..\..\..\Distributable\AppWarpMonoCompat.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\Distributable\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="AppWarpMonoLibrary">
+      <HintPath>..\..\V_1.5\AppWarpMonoLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,8 @@ using com.shephertz.app42.gaming.multiplayer.client.events;
 using com.shephertz.app42.gaming.multiplayer.client.listener;
 using com.shephertz.app42.gaming.multiplayer.client;
 
+using System.Collections.Generic;
+
 namespace HelloWorld_iPhone
 {
 	public partial class ChatController : UIViewController, NotifyListener
@@ -111,7 +113,23 @@ namespace HelloWorld_iPhone
 		
 		public void onUserLeftRoom (RoomData eventObj, string username){
 		}
-		
+
+		public void onGameStarted(string a, string b,string c){}
+
+		public void onGameStopped(string a, string b){}
+
+		public void onUserPaused(string a, bool b, string c){}
+
+		public void onUserResumed(string a, bool b, string c){}
+
+		public void onPrivateChatReceived(string a, string b){}
+
+		public void onMoveCompleted(MoveEvent a){}
+
+		public void onUserChangeRoomProperty(RoomData a, string b, Dictionary<string, object> c, Dictionary<string, string> d)
+		{
+		}
+
 		private struct ChatMessage
 		{
 			public String sender;

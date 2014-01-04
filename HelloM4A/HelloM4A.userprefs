@@ -3,8 +3,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="HelloM4A/Constants.cs">
     <Files>
       <File FileName="HelloM4A/JoinActivity.cs" Line="1" Column="1" />
-      <File FileName="HelloM4A/ChatActivity.cs" Line="8" Column="23" />
-      <File FileName="HelloM4A/Constants.cs" Line="11" Column="1" />
+      <File FileName="HelloM4A/ChatActivity.cs" Line="1" Column="1" />
+      <File FileName="HelloM4A/Constants.cs" Line="8" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
