@@ -1,29 +1,22 @@
 AppWarpMono
 ===========
 
-[![OverView](http://appwarp.shephertz.com/images/appwarp_logo.png)](http://appwarp.shephertz.com)
+[![OverView](http://appwarp.shephertz.com/wp-content/themes/twentytwelve/images/devcenter/sdks-icon/mono.png)](http://appwarp.shephertz.com)
 
 Cross platform portable dll for MonoDroid and MonoTouch. This will allow you to build cross-platform multiplayer games
 on iOS and Android using C#/.NET skills by leveraging the powerfull [AppWarp](http://appwarp.shephertz.com) real time
 cloud gaming network.
 
-This repo contains the dll built using MonoDevelop and targeted towards Mono Portable profile. 
-This means the same dll will work in your MonoDroid applications targetted for Android as well as
-you MonoTouch application targetted towards iPhone.
+This repo contains the dll built using MonoDevelop and will work in your MonoDroid applications targetted for Android as well as your MonoTouch application targetted towards iPhone.
 
-[Getting Started](https://github.com/shephertz/AppWarp_WP7_SDK_DLL/wiki/Getting-Started)
 
-[Reference](https://github.com/shephertz/AppWarp_WP7_SDK_DLL/wiki/Reference)
-
-[FAQ](https://github.com/shephertz/AppWarp_JAVA_SDK_JAR/wiki/FAQ)
-
-Pre-requisites
+**Pre-requisites**
 
 This assumes that you have setup your MonoDevelop IDE for the platform that you are trying to build for (iOS/Android etc).
 If you haven't done that, you can get started on that by visiting http://docs.xamarin.com/
 
 
-Steps for integrating AppWarp in to your Mono project
+**Steps for integrating AppWarp in to your Mono project**
 
 The steps are quite straight forward
 
@@ -31,12 +24,12 @@ The steps are quite straight forward
 
 2. Open your application's solution
 
-3. Add references to the unzipped dlls i.e. AppWarpMonoCompat.dll and Newtonsoft.Json.dll
+3. Add references to the unzipped dlls i.e. AppWarpMonoLibrary.dll
 
 4. You can now add references to WarpClient and start using it in your application!
 
 
-How to use the Samples 
+**How to use the Samples**
 
 1. Login/Sign-up on [AppHQ](https://apphq.shephertz.com/register?appwarp=true) (ShepHertz developer dashboard)
 
@@ -60,14 +53,3 @@ Follow the steps mentioned under above on integrating AppWarp into your Mono Pro
 Add the keys you got from AppHQ and add them to Constants.cs file where indicated. You are now ready to build!
 
 [![](http://blogs.shephertz.com/wp-content/uploads/2013/05/Signup.jpg)](https://apphq.shephertz.com/register?appwarp=true)[![](http://blogs.shephertz.com/wp-content/uploads/2013/05/AlreadyRegistered.jpg)](https://apphq.shephertz.com/)
-
-Third Party binaries and licenses used
-JSON.NET
-
-(http://json.codeplex.com) The MIT License (MIT) Copyright (c) 2007 James Newton-King
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
